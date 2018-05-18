@@ -116,6 +116,7 @@
     <ClInclude Include="FileFinder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FileAnalyser.cpp" />
     <ClCompile Include="FileFinder.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
