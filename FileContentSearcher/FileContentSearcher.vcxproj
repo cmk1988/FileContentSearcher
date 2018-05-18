@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileAnalyser.cpp" />
+    <ClCompile Include="FileContentSearcher.cpp" />
     <ClCompile Include="FileFinder.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
