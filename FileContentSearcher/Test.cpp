@@ -1,8 +1,10 @@
 #include "FileContentSearcher.h"
 
-int main()
+int main(int argc, char** argv)
 {
-	FileContentSearcher fcs("E:\\Neuer Ordner\\");
-	auto a = fcs.find_files_containing("test",4);
+	if (argc != 3)
+		return EXIT_FAILURE;
+	FileContentSearcher fcs(argv[1]);
+	auto a = fcs.find_files_containing(argv[2], 4);
 	return EXIT_SUCCESS;
 }
