@@ -11,4 +11,5 @@ public:
 
 private:
 	FileFinder* ff;
+	vector<string> *filePaths;
 };
