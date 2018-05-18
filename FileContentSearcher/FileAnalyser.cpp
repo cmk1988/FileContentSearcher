@@ -10,14 +10,15 @@ bool FileAnalyser::analyse(string filepath, char* to_find, int size)
 	}
 	char* buffer = (char*)malloc(size);
 	int c;
-	while((c = fgetc(file)) > 0)
+	bool b = false;
+	while((c = fgetc(file)) > 0 && !b)
 	{
 		for (size_t i = 0; i < size-1; i++)
 		{
 			buffer[i] = buffer[i+1];
 		}
 		buffer[size-1] = c;
-		bool b = true;
+		b = true;
 		for (size_t i = 0; i < size; i++)
 		{
 			if (buffer[i] != to_find[i])
@@ -26,14 +27,8 @@ bool FileAnalyser::analyse(string filepath, char* to_find, int size)
 				break;
 			}
 		}
-		if (b)
-		{
-			free(buffer);
-			fclose(file);
-			return true;
-		}
 	}
 	free(buffer);
 	fclose(file);
-	return false;
+	return b;
 }
