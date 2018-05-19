@@ -42,6 +42,7 @@ vector<string> FileFinder::_scan(string path)
 bool FileFinder::is_directory(string path)
 {
 	struct stat s;
+	struct _stat64i32 ws;
 	if (stat(path.c_str(), &s) == 0)
 	{
 		if (s.st_mode & S_IFDIR)

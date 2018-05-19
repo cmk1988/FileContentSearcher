@@ -116,12 +116,14 @@
     <ClInclude Include="FileAnalyser.h" />
     <ClInclude Include="FileContentSearcher.h" />
     <ClInclude Include="FileFinder.h" />
+    <ClInclude Include="WindowsConsoleOutput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileAnalyser.cpp" />
     <ClCompile Include="FileContentSearcher.cpp" />
     <ClCompile Include="FileFinder.cpp" />
     <ClCompile Include="Test.cpp" />
+    <ClCompile Include="WindowsConsoleOutput.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -28,6 +28,9 @@ vector<string> FileContentSearcher::find_files_containing(char* c, int size)
 	vector<string> found;
 	for (size_t i = 0; i < count; i++)
 	{
+		gotoxy(1, 1);
+		float f = (i / (count*1.f)) * 100.0f;
+		cout << f;
 		if (FileAnalyser::analyse(filePaths->at(i), c, size))
 			found.push_back(filePaths->at(i));
 	}

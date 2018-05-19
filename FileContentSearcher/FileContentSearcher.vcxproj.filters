@@ -24,6 +24,9 @@
     <ClInclude Include="FileAnalyser.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="WindowsConsoleOutput.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileFinder.cpp">
@@ -36,6 +39,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="FileContentSearcher.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsConsoleOutput.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

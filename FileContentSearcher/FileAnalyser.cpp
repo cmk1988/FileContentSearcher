@@ -11,7 +11,7 @@ bool FileAnalyser::analyse(string filepath, char* to_find, int size)
 	char* buffer = (char*)malloc(size);
 	int c;
 	bool b = false;
-	while((c = fgetc(file)) > 0 && !b)
+	while((c = fgetc(file)) != EOF && !b)
 	{
 		for (size_t i = 0; i < size-1; i++)
 		{

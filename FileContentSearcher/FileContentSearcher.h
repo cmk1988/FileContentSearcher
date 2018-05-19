@@ -1,6 +1,7 @@
 #pragma once
 #include "FileAnalyser.h"
 #include "FileFinder.h"
+#include "WindowsConsoleOutput.h"
 
 class FileContentSearcher
 {
