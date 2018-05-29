@@ -1,6 +1,6 @@
 #include "FileAnalyser.h"
 
-bool FileAnalyser::analyse(string filepath, char* to_find, int size)
+int FileAnalyser::analyse(string filepath, char* to_find, int size)
 {
 	FILE *file;
 	fopen_s(&file, filepath.c_str(), "r+b");
@@ -11,6 +11,7 @@ bool FileAnalyser::analyse(string filepath, char* to_find, int size)
 	char* buffer = (char*)malloc(size);
 	int c;
 	bool b = false;
+	int adress = 0;
 	while((c = fgetc(file)) != EOF && !b)
 	{
 		for (size_t i = 0; i < size-1; i++)
@@ -27,8 +28,9 @@ bool FileAnalyser::analyse(string filepath, char* to_find, int size)
 				break;
 			}
 		}
+		adress++;
 	}
 	free(buffer);
 	fclose(file);
-	return b;
+	return b ? adress : -1;
 }
