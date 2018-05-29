@@ -13,7 +13,7 @@ FileContentSearcher::~FileContentSearcher()
 		free(filePaths);
 }
 
-vector<string> FileContentSearcher::find_files_containing(char* c, int size)
+vector<FileContentSearcher::Result> FileContentSearcher::find_files_containing(char* c, int size)
 {
 	int count = 0;
 	if (filePaths == NULL)
@@ -25,14 +25,20 @@ vector<string> FileContentSearcher::find_files_containing(char* c, int size)
 	{
 		count = filePaths->size();
 	}
-	vector<string> found;
+	vector<Result> found;
 	for (size_t i = 0; i < count; i++)
 	{
 		gotoxy(1, 1);
 		float f = (i / (count*1.f)) * 100.0f;
 		cout << f;
-		if (FileAnalyser::analyse(filePaths->at(i), c, size))
-			found.push_back(filePaths->at(i));
+		int result = FileAnalyser::analyse(filePaths->at(i), c, size);
+		if (result >= 0)
+		{
+			Result r;
+			r.address = result;
+			r.filePath = filePaths->at(i);
+			found.push_back(r);
+		}
 	}
 	return found;
 }

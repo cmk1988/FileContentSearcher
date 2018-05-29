@@ -6,9 +6,16 @@
 class FileContentSearcher
 {
 public:
+	class Result
+	{
+	public:
+		int address;
+		string filePath;
+	};
+
 	FileContentSearcher(string rootpath);
 	~FileContentSearcher();
-	vector<string> find_files_containing(char* c, int count);
+	vector<Result> find_files_containing(char* c, int count);
 
 private:
 	FileFinder* ff;
