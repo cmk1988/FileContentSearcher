@@ -14,5 +14,6 @@ int main(int argc, char** argv)
 		auto f = a.at(i);
 		cout << f.filePath << " found at: " << f.address << endl;
 	}
+	system("PAUSE");
 	return EXIT_SUCCESS;
 }
