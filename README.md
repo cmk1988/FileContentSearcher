@@ -23,7 +23,7 @@ The FileContentSearcher-class uses the other three classes to find all files (Fi
 
 <br>
 
-The FileAnalyser-class frisks the file for the character sqquence. If you just want to frisk the files, you just need to use this class.
+The FileAnalyser-class frisks a file for the given character sequence. If you just want to frisk a file, you just need to use this class.
 
 <br><br>
 
