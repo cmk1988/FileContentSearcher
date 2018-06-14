@@ -11,7 +11,7 @@ The project just contains four classes, FileContentSearcher-, FileAnalyser-, Fil
 
 <br>
 
-The FileContentSearcher-class uses the other three classes to find all files (FileFinder), to check them if they contain the character sqquence (FileAnalyser) and to output the progress (WindowsConsoleOutput).
+The FileContentSearcher-class uses the other three classes to find all files (FileFinder), to check them if they contain the character sequence (FileAnalyser) and to output the progress (WindowsConsoleOutput).
 
 <br>
 
