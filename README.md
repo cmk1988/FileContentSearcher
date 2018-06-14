@@ -31,4 +31,4 @@ The FileAnalyser-class frisks the file for the character sqquence. If you just w
 
 <br>
 
-The FileFinder-class searches for files in the given directory and subdirectories. If you just want to find files in the directory, you just need to use this class.
+The FileFinder-class searches for files in the given directory and subdirectories. If you just want to find files in a directory, you just need to use this class.
